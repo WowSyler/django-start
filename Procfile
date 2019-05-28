@@ -1,1 +1,1 @@
-gunicorn hello:app --preload
+web: gunicorn homework.wsgi
