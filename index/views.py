@@ -11,7 +11,7 @@ def get_story(request):
 
 
 def start_story(request, id):
-    story = StoryDetail.objects.get(id=id, fisrt=True)
+    story = StoryDetail.objects.get(story_id=id, fisrt=True)
     answers = Answers.objects.filter(storydetail=story)
     return render(request,'index/startstory.html',{
         'story':story,
@@ -19,7 +19,7 @@ def start_story(request, id):
     })
 
 def story(request, id):
-    story = StoryDetail.objects.get(id=id, fisrt=False)
+    story = StoryDetail.objects.get(story_id=id, fisrt=False)
     answers = Answers.objects.filter(storydetail=story)
     return render(request,'index/storydetail.html',{
         'story':story,
