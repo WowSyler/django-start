@@ -1,0 +1,17 @@
+{% extends 'index/base.html' %}
+
+{% block content %}
+ <div class="list-group">
+
+ <a href="#" class="list-group-item list-group-item-action active">
+    <h3> {{ story.detail }}</h3>
+  </a>
+
+   {% for answer in answers %}
+     <a href="http://127.0.0.1:8000/storydetail/{{answer.returnSdId}}/" class="list-group-item list-group-item-action list-group-item-success text-center"> <h3> {{ answer.adetail }}</h3> </a>
+            
+         
+    {% endfor %}
+
+
+{% endblock %}
