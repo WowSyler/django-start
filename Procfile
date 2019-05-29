@@ -1,1 +1,1 @@
-web: gunicorn HomeWork.wsgi 
+web: gunicorn HomeWork.wsgi --log-file -
