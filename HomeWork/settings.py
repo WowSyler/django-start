@@ -29,6 +29,8 @@ ALLOWED_HOSTS = ['mikegroup.herokuapp.com']
 
 
 # Application definition
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 
 
 INSTALLED_APPS = [
@@ -52,8 +54,6 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     
 ]
-
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 ROOT_URLCONF = 'HomeWork.urls'
